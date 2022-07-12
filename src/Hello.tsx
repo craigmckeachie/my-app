@@ -1,12 +1,15 @@
 import React from 'react';
 
+export interface Props {
+  settings: Settings;
+}
 export interface Settings {
   name: string;
   enthusiasmLevel?: number;
 }
 
-function Hello(props: Settings) {
-  const { enthusiasmLevel, name } = props;
+function Hello(props: Props) {
+  const { enthusiasmLevel, name } = props?.settings;
   if (enthusiasmLevel && enthusiasmLevel <= 0) {
     throw new Error('You could be a little more enthusiastic. :D');
   }

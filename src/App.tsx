@@ -1,10 +1,8 @@
 import './App.css';
 import Hello from './Hello';
+import { Settings } from './Settings';
 
-const settings = {
-  name: 'Joe',
-  enthusiasmLevel: 2,
-};
+const settings = new Settings('Joe', 6);
 
 function App() {
   return <Hello settings={settings} />;

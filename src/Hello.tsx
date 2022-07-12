@@ -1,12 +1,19 @@
 import React from 'react';
 
 export interface Props {
-  settings: Settings;
+  settings: {
+    name: string;
+    enthusiasmLevel?: number;
+  };
 }
-export interface Settings {
-  name: string;
-  enthusiasmLevel?: number;
-}
+
+// export interface Props {
+//   settings: Settings;
+// }
+// export interface Settings {
+//   name: string;
+//   enthusiasmLevel?: number;
+// }
 
 function Hello(props: Props) {
   const { enthusiasmLevel, name } = props?.settings;
